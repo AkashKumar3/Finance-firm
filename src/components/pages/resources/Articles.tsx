@@ -31,7 +31,8 @@ const articles = [
 const Articles = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Latest Articles</h1>
+        <h1 className="text-4xl font-bold text-center">Latest <span className='text-red-600'>Articles</span></h1>
+        <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {articles.map((article, index) => (
           <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -41,7 +42,7 @@ const Articles = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <span className="text-sm text-blue-600 font-semibold">{article.category}</span>
+              <span className="text-sm text-red-600 font-semibold">{article.category}</span>
               <h2 className="text-xl font-bold mt-2 mb-4">{article.title}</h2>
               <p className="text-gray-600 mb-4">{article.excerpt}</p>
               <div className="flex items-center justify-between">
@@ -51,7 +52,7 @@ const Articles = () => {
                   <Calendar className="h-4 w-4 text-gray-400" />
                   <span className="text-sm text-gray-500">{article.date}</span>
                 </div>
-                <button className="text-blue-600 hover:text-blue-700">
+                <button className="text-red-600 hover:text-red-900">
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </div>

@@ -31,13 +31,14 @@ const events = [
 const Events = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Upcoming Events</h1>
+          <h1 className="text-4xl font-bold text-center">Upcoming <span className='text-red-600'>Events</span></h1>
+          <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
       <div className="space-y-6">
         {events.map((event, index) => (
           <div key={index} className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <div className="flex-1">
-                <span className="text-sm font-semibold text-blue-600">{event.category}</span>
+                <span className="text-sm font-semibold text-red-600">{event.category}</span>
                 <h2 className="text-2xl font-bold mt-1">{event.title}</h2>
                 <p className="text-gray-600 mt-2">{event.description}</p>
                 <div className="flex flex-wrap gap-4 mt-4">
@@ -55,7 +56,7 @@ const Events = () => {
                   </div>
                 </div>
               </div>
-              <button className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+              <button className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700">
                 Register Now
                 <ArrowRight className="ml-2 h-4 w-4" />
               </button>

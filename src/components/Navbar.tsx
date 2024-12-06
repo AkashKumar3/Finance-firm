@@ -35,30 +35,30 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/Finance-firm" className="flex items-center space-x-2">
-              <BarChart3 className="h-8 w-8 text-blue-600" />
+              <BarChart3 className="h-8 w-8 text-red-600" />
               <span className="text-xl font-bold text-gray-800">
                 3R's Investment Solution
               </span>
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 font-bold">
             <Link
               to="/Finance-firm"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2"
+              className="text-gray-700 hover:text-red-600 px-3 py-2"
             >
               Home
             </Link>
             <Link
               to="/Finance-firm/about"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2"
+              className="text-gray-700 hover:text-red-600 px-3 py-2"
             >
               About Us
             </Link>
 
             {/* Offerings Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 group-hover:text-blue-600 px-3 py-2 inline-flex items-center">
+              <button className="text-gray-700 group-hover:text-red-600 px-3 py-2 inline-flex items-center">
                 Offerings
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
             {/* Resources Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 group-hover:text-blue-600 px-3 py-2 inline-flex items-center">
+              <button className="text-gray-700 group-hover:text-red-600 px-3 py-2 inline-flex items-center">
                 Resources
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
@@ -100,7 +100,7 @@ const Navbar = () => {
 
             {/* Tools Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 group-hover:text-blue-600 px-3 py-2 inline-flex items-center">
+              <button className="text-gray-700 group-hover:text-red-600 px-3 py-2 inline-flex items-center">
                 Tools
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
@@ -121,7 +121,7 @@ const Navbar = () => {
 
             <Link
               to="/Finance-firm/contact"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2"
+              className="text-gray-700 hover:text-red-600 px-3 py-2"
             >
               Contact Us
             </Link>
@@ -183,7 +183,7 @@ const Navbar = () => {
             About Us
           </Link>
           <div className="relative group">
-            <button className="text-gray-700 group-hover:text-blue-600 px-3 py-2 inline-flex items-center">
+            <button className="text-gray-700 group-hover:text-red-600 px-3 py-2 inline-flex items-center">
               Offerings
               <ChevronDown className="ml-1 h-4 w-4" />
             </button>
@@ -203,7 +203,7 @@ const Navbar = () => {
           </div>
                       {/* Resources Dropdown */}
                       <div className="relative group">
-              <button className="text-gray-700 group-hover:text-blue-600 px-3 py-2 inline-flex items-center">
+              <button className="text-gray-700 group-hover:text-red-600 px-3 py-2 inline-flex items-center">
                 Resources
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
@@ -224,7 +224,7 @@ const Navbar = () => {
           
            {/* Tools Dropdown */}
            <div className="relative group">
-              <button className="text-gray-700 group-hover:text-blue-600 px-3 py-2 inline-flex items-center">
+              <button className="text-gray-700 group-hover:text-red-600 px-3 py-2 inline-flex items-center">
                 Tools
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>

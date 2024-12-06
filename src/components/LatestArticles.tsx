@@ -42,7 +42,8 @@ const LatestArticles = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Latest Articles</h2>
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Latest <span className='text-red-600'>Articles</span></h2>
+          <div className="w-24 h-1 bg-gray-200 mx-auto mt-4" />
           <p className="mt-4 text-xl text-gray-600">
             Stay informed with our latest insights and analysis
           </p>
@@ -63,7 +64,7 @@ const LatestArticles = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-red-600 transition-colors duration-300">
                   {article.title}
                 </h3>
                 <p className="mt-2 text-sm text-gray-600">{article.excerpt}</p>

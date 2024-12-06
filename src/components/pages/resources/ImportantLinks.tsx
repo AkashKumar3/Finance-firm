@@ -42,7 +42,8 @@ const links = [
 const ImportantLinks = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Important Links</h1>
+           <h1 className="text-4xl font-bold text-center">Important <span className='text-red-600'>Links</span></h1>
+           <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {links.map((section, index) => (
           <div key={index} className="bg-white rounded-lg shadow-lg p-6">

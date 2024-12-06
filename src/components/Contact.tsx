@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="space-y-12">
       <section className="text-center">
-        <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
+      <h1 className="text-4xl font-bold text-center">Contact <span className='text-red-600'>Us</span></h1>
+      <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Get in touch with our team of financial experts. We're here to help you succeed.
         </p>
@@ -47,7 +51,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors"
+              className="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors"
             >
               Send Message
             </button>
@@ -58,26 +62,25 @@ const Contact = () => {
           <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
           <div className="space-y-6">
             <div className="flex items-center">
-              <Mail className="h-6 w-6 text-indigo-600 mr-3" />
+              <Mail className="h-6 w-6 text-red-600 mr-3" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-gray-600">contact@finanalyst.com</p>
+                <p className="text-gray-600">rohan7645820204@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center">
-              <Phone className="h-6 w-6 text-indigo-600 mr-3" />
+              <Phone className="h-6 w-6 text-red-600 mr-3" />
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
+                <p className="text-gray-600">+91 8340782324</p>
               </div>
             </div>
             <div className="flex items-center">
-              <MapPin className="h-6 w-6 text-indigo-600 mr-3" />
+              <MapPin className="h-6 w-6 text-red-600 mr-3" />
               <div>
                 <h3 className="font-semibold">Address</h3>
                 <p className="text-gray-600">
-                  123 Financial District<br />
-                  New York, NY 10004
+                Kuju, Jharkhand, 825316
                 </p>
               </div>
             </div>

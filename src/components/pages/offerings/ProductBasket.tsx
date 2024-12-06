@@ -43,7 +43,8 @@ const products = [
 const ProductBasket = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Product Basket</h1>
+      <h1 className="text-4xl font-bold text-center">Product <span className='text-red-600'>Basket</span></h1>
+      <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
       <p className="text-lg text-gray-600 mb-12">
         Explore our comprehensive range of financial products designed to meet your investment needs
       </p>

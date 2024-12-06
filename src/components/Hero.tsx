@@ -4,6 +4,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { color } from 'framer-motion';
+
 
 const slides = [
   {
@@ -40,7 +42,7 @@ const slides = [
 
 const Hero = () => {
   return (
-    <div className="sm:h-screen md:h-screen h-96 w-full">
+    <div className="sm:h-screen md:h-screen h-96 w-full pt-12 ">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation
@@ -55,7 +57,7 @@ const Hero = () => {
               className="relative h-full w-full bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="absolute inset-0 bg-black bg-opacity-50" />
+              <div className="absolute inset-0 bg-black bg-opacity-50 " />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                 <h2 className="text-4xl md:text-6xl font-bold mb-4">{slide.title}</h2>
                 <p className="text-xl md:text-2xl">{slide.description}</p>

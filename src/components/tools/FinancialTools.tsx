@@ -45,7 +45,8 @@ const tools = [
 const FinancialTools = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Financial Tools</h1>
+        <h1 className="text-4xl font-bold text-center">Financial <span className='text-red-600'>Tools</span></h1>
+        <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {tools.map((tool) => {
           const Icon = tool.icon;
@@ -53,7 +54,7 @@ const FinancialTools = () => {
             <Link key={tool.path} to={tool.path}>
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center mb-4">
-                  <Icon className="h-6 w-6 text-blue-600 mr-2" />
+                  <Icon className="h-6 w-6 text-red-600 mr-2" />
                   <h2 className="text-xl font-semibold text-gray-900">{tool.title}</h2>
                 </div>
                 <p className="text-gray-600">{tool.description}</p>

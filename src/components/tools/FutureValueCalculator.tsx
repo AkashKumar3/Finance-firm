@@ -4,17 +4,14 @@ import { formatCurrency } from '../../lib/calculators';
 
 const FutureValueCalculator = () => {
   const [principal, setPrincipal] = useState<number>(50000);  // Default initial investment
-  const [monthlyContribution, setMonthlyContribution] = useState<number>(10000);  // Default monthly contribution
   const [annualInterestRate, setAnnualInterestRate] = useState<number>(8);  // Default annual interest rate
   const [investmentDuration, setInvestmentDuration] = useState<number>(10);  // Default investment duration (in years)
 
-  // Convert annual interest rate to monthly interest rate (in decimal)
-  const monthlyInterestRate = annualInterestRate / 12 / 100;
-  const totalMonths = investmentDuration * 12;
+  // Convert annual interest rate to decimal (for compound interest calculation)
+  const rate = annualInterestRate / 100;
 
-  // Future Value calculation
-  const futureValue = (principal * Math.pow(1 + monthlyInterestRate, totalMonths)) +
-    (monthlyContribution * ((Math.pow(1 + monthlyInterestRate, totalMonths) - 1) / monthlyInterestRate));
+  // Future Value calculation (only principal, no monthly contribution)
+  const futureValue = principal * Math.pow(1 + rate, investmentDuration);
 
   return (
     <CalculatorCard title="Future Value Calculator">
@@ -25,15 +22,6 @@ const FutureValueCalculator = () => {
             type="number"
             value={principal}
             onChange={(e) => setPrincipal(Number(e.target.value))}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Monthly Contribution</label>
-          <input
-            type="number"
-            value={monthlyContribution}
-            onChange={(e) => setMonthlyContribution(Number(e.target.value))}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
           />
         </div>
@@ -63,11 +51,11 @@ const FutureValueCalculator = () => {
             </div>
             <div>
               <p className="text-sm text-gray-600">Total Investment</p>
-              <p className="text-lg font-semibold text-gray-900">{formatCurrency(principal + (monthlyContribution * investmentDuration * 12))}</p>
+              <p className="text-lg font-semibold text-gray-900">{formatCurrency(principal)}</p>
             </div>
             <div>
               <p className="text-sm text-gray-600">Total Earnings</p>
-              <p className="text-lg font-semibold text-green-600">{formatCurrency(futureValue - (principal + (monthlyContribution * investmentDuration * 12)))}</p>
+              <p className="text-lg font-semibold text-green-600">{formatCurrency(futureValue - principal)}</p>
             </div>
           </div>
         </div>

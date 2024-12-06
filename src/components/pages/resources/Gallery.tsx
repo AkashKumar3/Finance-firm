@@ -26,7 +26,8 @@ const images = [
 const Gallery = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Image Gallery</h1>
+            <h1 className="text-4xl font-bold text-center">Image <span className='text-red-600'>Gallery</span></h1>
+            <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {images.map((image, index) => (
           <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg">
@@ -37,7 +38,7 @@ const Gallery = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
               <div className="absolute bottom-0 left-0 right-0 p-4">
-                <span className="text-sm text-blue-300">{image.category}</span>
+                <span className="text-sm text-red-300">{image.category}</span>
                 <h3 className="text-xl font-bold text-white mt-1">{image.title}</h3>
               </div>
             </div>

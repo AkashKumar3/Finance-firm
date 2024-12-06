@@ -21,9 +21,10 @@ const Navbar = () => {
     tools: [
       { title: "MF Lumpsum Calculator", path: "/Finance-firm/tools/returns-calculator" },
       { title: "MF SIP Calculator", path: "/Finance-firm/tools/sip-calculator" },
-      { title: "MF Historic NAV", path: "/Finance-firm/tools/historic-nav" },
-      { title: "MF Dividend History", path: "/Finance-firm/tools/dividend-history" },
-      { title: "MF Scheme Snapshot", path: "/Finance-firm/tools/scheme-snapshot" },
+      {title: "MF EMI Calculator", path: "/Finance-firm/tools/emi-calculator"},
+      { title: "MF Future Value Calculator", path: "/Finance-firm/tools/future-value-calculator" },
+      { title: "MF Present Value Calculator", path: "/Finance-firm/tools/present-value-calculator" },
+      { title: "MF SWP Calculator", path: "/Finance-firm/tools/swp-calculator" },
       { title: "Financial Tools", path: "/Finance-firm/tools/financial-tools" },
     ],
   };

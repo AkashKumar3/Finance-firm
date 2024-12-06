@@ -8,9 +8,6 @@ import LatestArticles from './components/LatestArticles';
 import Footer from './components/Footer';
 import ReturnsCalculator from './components/tools/ReturnsCalculator';
 import SIPCalculator from './components/tools/SIPCalculator';
-import HistoricNAV from './components/tools/HistoricNAV';
-import DividendHistory from './components/tools/DividendHistory';
-import SchemeSnapshot from './components/tools/SchemeSnapshot';
 import FinancialTools from './components/tools/FinancialTools';
 import ClientServices from './components/pages/offerings/ClientServices';
 import ProductBasket from './components/pages/offerings/ProductBasket'
@@ -23,6 +20,10 @@ import Videos from './components/pages/resources/Videos';
 import ImportantLinks from './components/pages/resources/ImportantLinks';
 import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
+import EMICalculator from './components/tools/EmiCalculator';
+import FutureValueCalculator from './components/tools/FutureValueCalculator';
+import PresentValueCalculator from './components/tools/PresentValueCalculator';
+import SWPCalculator from './components/tools/SwpCalculator';
 
 function App() {
   return (
@@ -97,10 +98,16 @@ function App() {
             </div>
           } />
 
-
+          {/* tools */}
           <Route path="/Finance-firm/tools/returns-calculator" element={
             <div className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
               <ReturnsCalculator />
+            </div>
+          } />
+          
+          <Route path="/Finance-firm/tools/emi-calculator" element={
+            <div className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+              <EMICalculator />
             </div>
           } />
           <Route path="/Finance-firm/tools/sip-calculator" element={
@@ -108,22 +115,27 @@ function App() {
               <SIPCalculator />
             </div>
           } />
-          <Route path="/Finance-firm/tools/historic-nav" element={
+          <Route path="/Finance-firm/tools/future-value-calculator" element={
             <div className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-              <HistoricNAV />
+              <FutureValueCalculator />
             </div>
           } />
-          <Route path="/Finance-firm/tools/dividend-history" element={
+          <Route path="/Finance-firm/tools/present-value-calculator" element={
             <div className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-              <DividendHistory />
+              <PresentValueCalculator />
             </div>
           } />
-          <Route path="/Finance-firm/tools/scheme-snapshot" element={
+          <Route path="/Finance-firm/tools/swp-calculator" element={
             <div className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-              <SchemeSnapshot />
+              <SWPCalculator />
             </div>
           } />
-          <Route path="/Finance-firm/tools/financial-tools" element={<FinancialTools />} />
+          <Route path="/Finance-firm/tools/financial-tools" element={
+            <div className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+              <FinancialTools />
+              </div>
+            } />
+              
         </Routes>
         <Footer />
       </div>

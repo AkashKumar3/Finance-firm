@@ -5,40 +5,40 @@ import { Calculator, TrendingUp, History, DollarSign, PieChart, Wallet } from 'l
 
 const tools = [
   {
-    title: 'MF Returns Calculator',
+    title: 'MF Lumpsum Calculator',
     description: 'Calculate your mutual fund returns with different scenarios',
     icon: Calculator,
-    path: '/tools/returns-calculator',
+    path: '/Finance-firm/tools/returns-calculator',
   },
   {
     title: 'MF SIP Calculator',
     description: 'Plan your SIP investments and see the potential returns',
     icon: TrendingUp,
-    path: '/tools/sip-calculator',
+    path: '/Finance-firm/tools/sip-calculator',
   },
   {
-    title: 'MF Historic NAV',
-    description: 'View historical NAV data for any mutual fund scheme',
+    title: 'MF EMI Calculator',
+    description:  'Calculate monthly EMI for loans based on amount, interest rate, and tenure.',
     icon: History,
-    path: '/tools/historic-nav',
+    path: '/Finance-firm/tools/emi-calculator',
   },
   {
-    title: 'MF Dividend History',
-    description: 'Track dividend payouts for mutual fund schemes',
+    title: 'MF SWP Calculator',
+    description: 'Calculate monthly withdrawals from an investment based on principal and interest',
     icon: DollarSign,
-    path: '/tools/dividend-history',
+    path: '/Finance-firm/tools/swp-calculator',
   },
   {
-    title: 'MF Scheme Snapshot',
-    description: 'Get detailed information about any mutual fund scheme',
+    title: 'MF Future Value Calculator',
+    description: 'Calculate the future value of an investment based on principal and interest rate.',
     icon: PieChart,
-    path: '/tools/scheme-snapshot',
+    path: '/Finance-firm/tools/future-value-calculator',
   },
   {
-    title: 'Other Financial Tools',
-    description: 'Access additional financial planning tools',
+    title: 'MF Present Value Calcultor',
+    description: 'Calculate the present value of a future sum based on interest rate and time period.',
     icon: Wallet,
-    path: '/tools/financial-tools',
+    path: '/Finance-firm/tools/present-value-calculator',
   },
 ];
 

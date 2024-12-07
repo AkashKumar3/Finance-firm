@@ -9,7 +9,7 @@ const articles = [
     author: 'John Smith',
     date: 'March 15, 2024',
     image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3',
-    link: '/articles/market-volatility',
+    link: 'https://www.bajajfinserv.in/investments/what-is-market-volatility',
   },
   {
     title: 'Investment Strategies for 2024',
@@ -17,7 +17,7 @@ const articles = [
     author: 'Sarah Johnson',
     date: 'March 12, 2024',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3',
-    link: '/articles/investment-strategies-2024',
+    link: 'https://www.bajajfinserv.in/investments/investment-strategy',
   },
   {
     title: 'The Rise of ESG Investing',
@@ -25,7 +25,7 @@ const articles = [
     author: 'Michael Chen',
     date: 'March 10, 2024',
     image: 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3',
-    link: '/articles/esg-investing',
+    link: 'https://www.acuitykp.com/blog/the-rise-of-esg-investing/',
   },
   {
     title: 'Retirement Planning Essentials',
@@ -33,7 +33,7 @@ const articles = [
     author: 'Emma Davis',
     date: 'March 8, 2024',
     image: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3',
-    link: '/articles/retirement-planning',
+    link: 'https://www.hdfclife.com/retirement-and-pension-plans/retirement-planning',
   },
 ];
 
@@ -52,6 +52,7 @@ const LatestArticles = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {articles.map((article) => (
             <Link
+            target='_blank'
               key={article.title}
               to={article.link}
               className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"

@@ -2,10 +2,10 @@ import React from 'react';
 import { StatCard } from './statCard';
 
 const stats = [
-  { value: '500', label: 'Satisfied Clients', delay: 0 },
-  { value: '200', label: 'Lacs AUM', delay: 0.2 },
-  { value: '15', label: 'Years of Experience', delay: 0.4 },
-  { value: '20', label: 'Awards', delay: 0.6 },
+  { value: '100+', label: 'Satisfied Clients', delay: 0 },
+  { value: '1 Cr+', label: 'AUM', delay: 0.2 },
+  { value: '5', label: 'Years of Experience', delay: 0.4 },
+  { value: '10', label: 'Awards', delay: 0.6 },
 ];
 
 export const StatsSection: React.FC = () => {

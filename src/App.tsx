@@ -23,7 +23,7 @@ import AboutUs from "./components/AboutUs";
 import EMICalculator from "./components/tools/EmiCalculator";
 import FutureValueCalculator from "./components/tools/FutureValueCalculator";
 import PresentValueCalculator from "./components/tools/PresentValueCalculator";
-import SWPCalculator from "./components/tools/SwpCalculator";
+import SWPCalculator from "./components/tools/SWPCalculator";
 import MutualFunds from "./components/products/MutualFunds";
 import CapitalMarket from "./components/products/CapitalMarket";
 import FixedIncome from "./components/products/FixedIncome";
@@ -41,7 +41,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path="/Finance-firm"
+            path="/Finance-firm/"
             element={
               <>
                 <Hero />

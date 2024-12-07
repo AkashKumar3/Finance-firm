@@ -1,93 +1,102 @@
-import React, { useEffect } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, LucideIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+
+interface ContactCardProps {
+  icon: LucideIcon;
+  title: string;
+  children: React.ReactNode;
+  delay: number;
+}
+
+const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, children, delay }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      className="text-center space-y-4"
+    >
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-pink-100"
+      >
+        <Icon className="h-8 w-8 text-pink-600" />
+      </motion.div>
+      <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
+      {children}
+    </motion.div>
+  );
+};
+
+interface PageTitleProps {
+  title: string;
+  highlightedWord: string;
+}
+
+const PageTitle: React.FC<PageTitleProps> = ({ title, highlightedWord }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="text-center mb-16"
+    >
+      <h1 className="text-5xl font-bold">
+        {title} <span className="text-pink-600">{highlightedWord}</span>
+      </h1>
+      <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: '6rem' }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="h-1 bg-gray-200 mx-auto mt-6"
+      />
+    </motion.div>
+  );
+};
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="space-y-12">
-      <section className="text-center">
-      <h1 className="text-4xl font-bold text-center">Contact <span className='text-red-600'>Us</span></h1>
-      <div className="w-24 h-1 bg-gray-200 mx-auto mt-4 mb-8" />
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Get in touch with our team of financial experts. We're here to help you succeed.
-        </p>
-      </section>
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
+    className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8"
+  >
+    <div className="max-w-7xl mx-auto">
+      <PageTitle title="Get in" highlightedWord="Touch" />
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <section className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
-          <form className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="Your name"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="your@email.com"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Message
-              </label>
-              <textarea
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                rows={4}
-                placeholder="Your message"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
-        </section>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-items-center">
+      <a href="https://www.google.com/maps/place/Shree+investment+solution/@23.7305105,85.5057077,15z/data=!4m14!1m7!3m6!1s0x39f48d7e248412df:0xc7d9ec8f3d252ec8!2sShree+investment+solution!8m2!3d23.7305105!4d85.5057077!16s%2Fg%2F11wr4p1hc6!3m5!1s0x39f48d7e248412df:0xc7d9ec8f3d252ec8!8m2!3d23.7305105!4d85.5057077!16s%2Fg%2F11wr4p1hc6?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target='_blank'>
+        <ContactCard icon={MapPin} title="Visit Us" delay={0.2}>
+          <p className="text-gray-600 max-w-xs">
+           Shree Investment soltion, Kuju, Jharkhand, 825316
+          </p>
+        </ContactCard>
+        </a>
 
-        <section className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-          <div className="space-y-6">
-            <div className="flex items-center">
-              <Mail className="h-6 w-6 text-red-600 mr-3" />
-              <div>
-                <h3 className="font-semibold">Email</h3>
-                <p className="text-gray-600">rohan7645820204@gmail.com</p>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <Phone className="h-6 w-6 text-red-600 mr-3" />
-              <div>
-                <h3 className="font-semibold">Phone</h3>
-                <p className="text-gray-600">+91 8340782324</p>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <MapPin className="h-6 w-6 text-red-600 mr-3" />
-              <div>
-                <h3 className="font-semibold">Address</h3>
-                <p className="text-gray-600">
-                Kuju, Jharkhand, 825316
-                </p>
-              </div>
-            </div>
+      <a href="tel: +91 8340782324">
+        <ContactCard icon={Phone} title="Call Us" delay={0.4}>
+          <div className="space-y-1">
+            <p className="text-gray-600">+91 8340782324</p>
           </div>
-        </section>
+        </ContactCard>
+        </a>
+
+      <a href="mailto: rohan7645820204@gmail.com">
+        <ContactCard icon={Mail} title="Email Us" delay={0.6}>
+          <div className="space-y-1">
+            <p className="text-gray-600">rohan7645820204@gmail.com</p>
+          </div>
+        </ContactCard>
+        </a>
       </div>
     </div>
+  </motion.div>
   );
 };
 
